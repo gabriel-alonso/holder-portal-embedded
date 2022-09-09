@@ -6,10 +6,15 @@ let html = new HTML(root);
 let promisse = html.generate();
 
 promisse.then((value) => {
-  let script = document.createElement("script");
+  let script_form = document.createElement("script");
+  let script_fontawesome = document.createElement("script");
 
   html.create(value);
-  script.src = "/src/services/form.js";
-  html.root.append(script);
+
+  script_form.src = "/src/services/form.js";
+  script_fontawesome.src = "https://kit.fontawesome.com/b99e675b6e.js";
+
+  html.root.append(script_form);
+  html.root.append(script_fontawesome);
   console.log(html.root);
 });
