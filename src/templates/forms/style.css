@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+#form-holder-portal {
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  color: #000000;
+}
+
+#form-holder-portal .input {
+  border-radius: 3px;
+  padding: 0.6rem;
+  border-width: 1px;
+  resize: none;
+}
+
+#form-holder-portal .input-check {
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  margin: 0 10px;
+}
+
+#form-holder-portal .btn {
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  background-color: #2a6078;
+  border-color: #2a6078;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+#form-holder-portal .validate-email {
+  display: none;
+  color: red;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+#form-holder-portal .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#form-holder-portal .text-area {
+  resize: none;
+}
+
+#form-holder-portal .label {
+  font-weight: 700;
+}
+
+#form-holder-portal .type {
+  margin-bottom: 10px;
+}
+
+#form-holder-portal .mandatory {
+  color: red;
+}

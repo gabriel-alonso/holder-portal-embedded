@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="./forms/style.css" />
+<form id="form-holder-portal">
+  <div class="container" id="form-container">
+    <label for="name" class="label"
+      ><span class="mandatory">* </span> Nome completo</label
+    >
+    <input type="text" name="name" class="input" required />
+
+    <label for="cpf" class="label"><span class="mandatory">* </span>CPF</label>
+    <input
+      type="text"
+      oninput="maskCPF(this)"
+      name="cpf"
+      class="input"
+      required
+    />
+
+    <label for="email" class="label"
+      ><span class="mandatory">* </span>E-mail</label
+    >
+    <input
+      type="text"
+      oninput="maskEmail(this)"
+      name="email"
+      class="input"
+      required
+    />
+    <span class="validate-email">Insira um e-mail válido</span>
+
+    <label for="type" class="label type"
+      ><span class="mandatory">* </span> Selecione o tipo de solicitação</label
+    >
+    <div class="checkbox">
+      <input
+        class="input-check"
+        type="checkbox"
+        name="revoke_data"
+        id="revoke_data"
+        checked
+      />
+      <span> Revogar dados </span>
+      <input
+        class="input-check"
+        type="checkbox"
+        name="simple_query"
+        id="simple_query"
+      />
+      <span> Consulta simples</span>
+    </div>
+
+    <label for="observation" class="label">Observação</label>
+    <textarea class="input text-area" name="observation" rows="5" cols="50">
+    </textarea>
+
+    <div id="google_recaptcha"></div>
+
+    <button class="btn" onclick="sendForm()" type="button">Enviar</button>
+  </div>
+  <div class="container" id="alert-container"></div>
+</form>
