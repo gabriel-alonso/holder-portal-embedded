@@ -1,4 +1,8 @@
 import HTML from "/src/services/html.js";
+import GoogleRecaptcha from "/src/services/google_recaptcha.js";
+
+let gr = new GoogleRecaptcha();
+gr.onloadCallback;
 
 const root = document.getElementById("portal-do-titular-form");
 
@@ -16,5 +20,6 @@ promisse.then((value) => {
 
   html.root.append(script_form);
   html.root.append(script_fontawesome);
+
   console.log(html.root);
 });
